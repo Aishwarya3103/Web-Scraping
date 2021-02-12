@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hstyle.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/video.js') }}"></script>
+
+</head>
+<body>
+	<header>
+       ScrApp 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a>
+            <li><a href="{{ url_for('pylib') }}">Python</a>
+            <li><a href="{{ url_for('procedure') }}">Procedure </a>
+            <li><a href="{{ url_for('op') }}">Output</i></a></li>
+        </ul>
+    </nav>
+	<div class="container">
+		<img src="{{ url_for('static', filename='intro.jpg') }}">
+		<button class="button" onclick="videoplay()">Click Me</button>
+	</div>
+
+	<video id="intro" controls autoplay>
+		<source src="{{ url_for('static', filename='intro.mp4') }}" type="video/mp4">
+	</video>
+
+</body>
+
+</html>
+
+

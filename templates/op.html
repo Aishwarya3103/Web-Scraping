@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="UTF-8" use_unicode="True">
+	<title></title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/tablestyle.css') }}">
+</head>
+<body>
+	<header>
+       ScrApp 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home </a>
+            <li><a href="{{ url_for('pylib') }}">Python</a>
+            <li><a href="{{ url_for('procedure') }}">Procedure </a>
+            <li><a href="{{ url_for('op') }}">Output </i></a></li>
+        </ul>
+    </nav>
+    <div class="prod" >
+	<table>
+		<thead>
+			<tr>
+				<!-- <th>Price</th> -->
+				<th>Product Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for value in products %}
+			<tr>
+				<!-- <td>{{ value[0] }}</td> -->
+				<td>{{ value[0] }}</td>
+			</tr>
+              
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

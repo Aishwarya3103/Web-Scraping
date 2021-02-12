@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/libstyle.css') }}">
+<script src="{{ url_for('static', filename='js/pict.js') }}"></script>
+<body>
+  <header>
+       ScrApp 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#main">Python</a></li>
+            <li><a href="{{ url_for('procedure') }}">Procedure</a></li>
+            <li><a href="{{ url_for('op') }}">Output</a></li>
+        </ul>
+    </nav>
+
+<div class="slideshow-container" id="main">
+
+<div class="mySlides fade">
+  <!-- <div class="numbertext">1 / 3</div> -->
+  <img src="{{ url_for('static', filename='request.jpg') }}">
+  <!-- <div class="text">Caption Text</div> -->
+  
+</div>
+
+<div class="mySlides fade">
+  <!-- <div class="numbertext">2 / 3</div> -->
+  <img src="{{ url_for('static', filename='beautiful.jpg') }}">
+  <!-- <div class="text">Caption Two</div> -->
+</div>
+
+<div class="mySlides fade">
+  <!-- <div class="numbertext">3 / 3</div> -->
+  <img src="{{ url_for('static', filename='pandas.jpg') }}">
+  <!-- <div class="text">Caption Three</div> -->
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+
+</body>
+</html> 

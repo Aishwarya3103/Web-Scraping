@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pstyle.css') }}">
+</head>
+<body>
+	<header>
+       ScrApp 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('pylib') }}">Python</a></li>
+            <li><a href="{{ url_for('procedure') }}">Procedure </a></li>
+            <li><a href="{{ url_for('op') }}">Output</a></li>
+        </ul>
+    </nav>     
+    <div>
+    <img src="{{ url_for('static', filename='procedure.jpg') }}">
+</div>
+</body>
+</html>
